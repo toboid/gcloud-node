@@ -419,6 +419,12 @@ describe('valueToProperty', function() {
     assert.deepEqual(val, expected);
   });
 
+  it('should translate null', function() {
+    var val = entity.valueToProperty(null);
+    var expected = {};
+    assert.deepEqual(val, expected);
+  });
+
   it('should translate a buffer', function() {
     var buffer = new Buffer('Hi');
     var val = entity.valueToProperty(buffer);
